@@ -86,7 +86,7 @@ hr{
 }
 
 .courses .course img{
-    width: 224px;
+    width: 60%;
     height: 104px;
 }
 .course-info{
@@ -112,4 +112,42 @@ hr{
 }
 .hours .fa-clock{
     color: #ED6B4F;
+}
+
+/* media query for responsive */
+/* mobile phones */
+@media screen and (max-width:668px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player{
+        flex-direction: column;
+    }
+    .blog, .courses{
+        flex-direction: column;
+        align-items: center;
+    }
+    .blog-info{
+        margin-left: 0px;
+    } 
+}
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .player{
+        justify-content: center;
+    }
+    .courses{
+       flex-wrap: wrap;
+    }
+    .courses .course img{
+        width: 35%;
+    }
 }
